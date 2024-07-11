@@ -1,38 +1,126 @@
-# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GT-HMIBuilder-串口屏示例项目
-
-<div align="center"
->
-   <a href="https://www.bilibili.com/video/BV1Ce411X78C/?spm_id_from=333.999.0.0&vd_source=0d93f7ed5a2d40d6e2d321f392d5e6f3"
-    > 本工程视频教程：五步教你设计串口屏，5分钟快速上手 </a>
+<br/>
+<div align="center">
+    <img src="images/logo3.png">
 </div>
+<br/>
+
+---
 
 #### 介绍
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GT-HMI Builder 是一个专注于串口屏应用的示例项目，由高通GT-HMI驱动。本项目提供了一套完整的解决方案，包括硬件连接、软件配置以及界面设计，旨在帮助开发者快速理解和实现串口屏的基础功能与示例。通过本项目，开发者可以学习如何利用高通GT-HMI平台构建交互式串口屏应用。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GT-HMI Builder项目是基于GT-HMI的开源硬件系列，涵盖了GT HMI模块（中大尺寸屏）、GUI-LCD开发板（小尺寸屏）、串口屏硬件开源，本次更新为开发者提供了一套全面的解决方案，从硬件连接到软件配置，再到界面设计，旨在加速理解GT-HMI 相关硬件的基础功能与示例。通过本项目，开发者可以深入学习如何利用高通GT-HMI平台构建多样化的交互式应用。
 
-#### 软件架构
+<div align="center">
+    <img src="images/GUI 人机交互平台六大优势.png">
+</div>
+
+<br/>
+
+#### 实物显示效果
+
+<br/>
+<div align="center">
+    <img src="images/车载.png">
+</div>
+<br/>
+
+#### 实物对应的Designer仿真
+
+<br/>
+<div align="center">
+    <img src="images/车载上位机.png">
+</div>
+<br/>
+
+#### 硬件原理框图
+
+<br/>
+<div align="center">
+    <img src="images/串口屏板原理框图.png">
+</div>
+<br/>
+
+<div align="center">
+    <hr style="width: 10%; border: 1px solid gray;">
+</div>
+
+#### 项目架构
 <ul>
-<li style="margin-bottom: 4px;">GTC-480272TFT43XP文件夹：包含串口屏的驱动程序和相关配置文件，供开发者修改和扩展。<ul>
+<li style="margin-bottom: 4px;">GT-HMI Module文件夹：包含4寸、4.3寸、7寸、10.1寸四款GUI HMI模块的软硬件资料。
+<ul>
+<li>GTC-480480TFT40XP文件夹：包含GT-HMI 4寸模块的软硬件资料。</li>
+<li>GTC-480272TFT43XP文件夹：包含GT-HMI 4.3寸模块的软硬件资料。</li>
+<li>GTC-480800TFT70GP文件夹：包含GT-HMI 7寸模块的软硬件资料。</li>
+<li>GTC-1024600TFT101GP文件夹：包含GT-HMI 10.1寸模块的软硬件资料。</li>
+<li>各个子文件夹结构：
+<ul>
+<li style="margin-bottom: 4px;">keil5/board/GTC***文件夹：<br>  
+&nbsp;&nbsp;&nbsp;&nbsp;包含4.3寸屏的驱动程序和相关配置文件，供开发者修改和扩展。
+<ul>
+<li>APP文件夹：应用逻辑代码</li>
+<li>BSP文件夹：硬件相关驱动代码</li>
+<li>ui文件夹：UI界面交互代码</li>
+</ul></li>
+
+<li style="margin-bottom: 4px;">Hardware文件夹：<br> &nbsp;&nbsp;&nbsp;&nbsp;GTC-480272TFT43XP模块参考原理图、PCB</li>
+
+<li style="margin-bottom: 4px;">4_3c_bed_call.gtui文件：<br> &nbsp;&nbsp;&nbsp;&nbsp;GTC-480272TFT43XP模块的示例工程文件，使用HMI-Designer打开，用于界面设计和配置。</li>
+<li>board文件夹：资源文件及代码</li>
+<li>out文件夹： 资源文件及代码（适合非HMI模块用户）</li>
+<li>screen文件夹：UI界面交互代码</li>
+<li>sources文件夹：图片素材文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Serial Port Example文件夹：串口示例文件夹，包含4.3寸和7寸两款屏的串口示例的硬件资料。
+<ul>
+<li>GTC-480272TFT43XP 串口例程文件夹：包含4.3寸屏串口示例的软硬件资料。</li>
+<li>GTC-480800TFT70GP 串口例程文件夹: 包含7寸屏串口示例的软硬件资料。</li>
+<li>各个子文件夹结构：
+<ul>
+<li style="margin-bottom: 4px;">GTC***文件夹：包含串口屏的驱动程序和相关配置文件，供开发者修改和扩展。<ul>
 <li>APP文件夹：应用逻辑代码</li><li>BSP文件夹：硬件相关驱动代码</li><li>ui文件夹：UI界面交互代码</li></ul></li>
-<li style="margin-bottom: 4px;">Hardware-Information文件夹：串口屏DEMO板原理图、PCB</li>
+<li style="margin-bottom: 4px;">Hardware文件夹：串口屏DEMO板原理图、PCB</li>
 <li style="margin-bottom: 4px;">hmi-project文件夹：包含串口示例的HMI-Designer工程文件，用于界面设计和配置。<ul>
 <li>board文件夹：资源文件及代码</li><li>out文件夹：资源文件及代码（适合非HMI模块用户）</li><li>screen文件夹：UI界面交互代码</li><li>sources文件夹：图片素材文件</li></ul></li>
 <li style="margin-bottom: 4px;">串口协议.xlsx：详细描述了串口屏的通信协议，便于理解和调试。</li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
 
 #### 快速开始
 <ul>
-<li style="margin-bottom: 4px;">硬件准备：<ul>
-<li>客户可参考示例代码中Hardware-Information文件夹下提供的硬件资料自己设计PCB板，</li><li>也可以使用使用高通4.3寸HMI模块。</li></ul></li>
-<li style="margin-bottom: 4px;">软件安装：<ul>
-<li>从高通官网www.hmi.gaotongfont.cn下载并安装HMI-Designer软件。用于打开hmi-project文件夹中的HMI工程文件。</li></ul></li>
-<li style="margin-bottom: 4px;">加载示例：<ul>
-<li>在HMI-Designer中打开hmi-project文件夹中的工程文件4.3.gtui，可以查看串口屏界面的内容和进行编译。</li><li>工程编译后将board文件夹内的resource.bin文件使用烧录器烧录到自己设计的PCB板中的GUI芯片中，如使用高通的4.3寸HMI模块，则使用SD卡升级即可。</li></ul></li>
-<li style="margin-bottom: 4px;">移植：<ul>
-<li>如果是使用资料中提供的硬件资料用其他MCU自行设计PCB，需要适配硬件驱动，移植本示例的APP及ui文件夹代码。移植教程详见https://www.hmi.gaotongfont.cn/gthmiengineyzczlc</li></ul></li>
-<li style="margin-bottom: 4px;">编译与下载：<ul>
-<li>自行设计的PCB，移植好后，编译下载到主控当中，</li><li>如使用高通4.3寸HMI模块，直接编译GTC-480272TFT43XP内的工程，将生成的固件使用SD卡升级到HMI模块的主控当中。</li></ul></li>
-<li style="margin-bottom: 4px;">测试运行：<ul>
-<li>通过串口调试助手发送命令，观察串口屏的响应和显示。通讯协议详见串口协议.xlsx文档。</li></ul></li>
+<li style="margin-bottom: 4px;">硬件准备：
+<ul>
+<li>客户可参考项目架构中子文件夹内的Hardware文件夹下的硬件资料自己设计PCB板。</li>
+<li>也可以使用以子文件夹命名型号的模块或者开发板，如若使用模块或者开发板请拨打0755-83453881联系业务人员</li>
+</ul>
+</li>
+<li style="margin-bottom: 4px;">软件安装：
+<ul>
+<li>从高通官网www.hmi.gaotongfont.cn下载并安装HMI-Designer软件。用于打开各个子文件夹中的以.gtui扩展名结尾的HMI工程文件。</li>
+</ul>
+</li>
+<li style="margin-bottom: 4px;">移植：
+<ul>
+<li>如果是使用资料中提供的硬件资料用其他MCU自行设计PCB，需要适配硬件驱动，移植教程详见https://www.hmi.gaotongfont.cn/gthmiengineyzczlc</li>
+</ul>
+</li>
+<li style="margin-bottom: 4px;">其他注意事项：
+<ul>
+<li>更详细的使用说明请参考各个子文件夹内的README.md文件</li>
+</ul>
+</li>
+</ul>
+
+#### GT-HMI Builder产品路线图
+<ul>
+<li style="margin-bottom: 4px;">第一弹（已上线）：开源串口屏/液晶屏模组系列，涵盖4寸，4.3寸，7寸，10寸</li>
+<li style="margin-bottom: 4px;">第二弹（2024年8月）：GUI-LCD，适用于小尺寸屏幕的GT-HMI Builder开源硬件系列，包含GUI-LCD以及开发板</li>
+<li style="margin-bottom: 4px;">第三弹（2024年9月）：基于WIFI SOC的开源硬件，可接入高通旗下智匠AI的API，包含大语言模型，视觉识别，语音识别，语音合成等AI服务</li>
+<li style="margin-bottom: 4px;">第四弹：待定</li>
 </ul>
 
 #### 相关视频教程
