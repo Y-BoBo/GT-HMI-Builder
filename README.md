@@ -44,51 +44,118 @@
 </div>
 
 #### 项目架构
-<ul>
-<li style="margin-bottom: 4px;">GT-HMI Module文件夹：包含4寸、4.3寸、7寸、10.1寸四款GUI HMI模块的软硬件资料。
-<ul>
-<li>GTC-480480TFT40XP文件夹：包含GT-HMI 4寸模块的软硬件资料。</li>
-<li>GTC-480272TFT43XP文件夹：包含GT-HMI 4.3寸模块的软硬件资料。</li>
-<li>GTC-480800TFT70GP文件夹：包含GT-HMI 7寸模块的软硬件资料。</li>
-<li>GTC-1024600TFT101GP文件夹：包含GT-HMI 10.1寸模块的软硬件资料。</li>
-<li>各个子文件夹结构：
-<ul>
-<li style="margin-bottom: 4px;">keil5/board/GTC***文件夹：<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;包含4.3寸屏的驱动程序和相关配置文件，供开发者修改和扩展。
-<ul>
-<li>APP文件夹：应用逻辑代码</li>
-<li>BSP文件夹：硬件相关驱动代码</li>
-<li>ui文件夹：UI界面交互代码</li>
-</ul></li>
 
-<li style="margin-bottom: 4px;">Hardware文件夹：<br> &nbsp;&nbsp;&nbsp;&nbsp;GTC-480272TFT43XP模块参考原理图、PCB</li>
+<li>1: GT-HMI Module文件夹结构</li>
+<table>
+ <tr>
+  <th style="width:40%">目录</th>
+  <th style="width:60%">说明</th>
+ </tr>
+ <tr>
+  <td>GT-HMI Module/</td>
+  <td>GUI HMI模块的软硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;|-GTC-480480TFT40XP/</td>
+  <td>GT-HMI 4寸模块的软硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;|-GTC-480272TFT43XP/</td>
+  <td>GT-HMI 4.3寸模块的软硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;|-GTC-480800TFT70GP/</td>
+  <td>GT-HMI 7寸模块的软硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;|-GTC-1024600TFT101GP/</td>
+  <td>GT-HMI 10.1寸模块的软硬件资料</td>
+ </tr>
+  <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-Hardware/</td>
+  <td>模块参考原理图、PCB</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-board/</td>
+  <td>资源文件及代码</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-keil5/board/GTC***/</td>
+  <td>模块的程序和相关配置文件</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-*.gtui尾缀文件</td>
+  <td>模块的示例工程文件，使用HMI-Designer打开</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-out/</td>
+  <td>资源文件及代码（适合非HMI模块用户）</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-screen/</td>
+  <td>UI界面交互代码</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-sources/</td>
+  <td>图片素材文件</td>
+ </tr>
+</table>
 
-<li style="margin-bottom: 4px;">4_3c_bed_call.gtui文件：<br> &nbsp;&nbsp;&nbsp;&nbsp;GTC-480272TFT43XP模块的示例工程文件，使用HMI-Designer打开，用于界面设计和配置。</li>
-<li>board文件夹：资源文件及代码</li>
-<li>out文件夹： 资源文件及代码（适合非HMI模块用户）</li>
-<li>screen文件夹：UI界面交互代码</li>
-<li>sources文件夹：图片素材文件</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Serial Port Example文件夹：串口示例文件夹，包含4.3寸和7寸两款屏的串口示例的硬件资料。
-<ul>
-<li>GTC-480272TFT43XP 串口例程文件夹：包含4.3寸屏串口示例的软硬件资料。</li>
-<li>GTC-480800TFT70GP 串口例程文件夹: 包含7寸屏串口示例的软硬件资料。</li>
-<li>各个子文件夹结构：
-<ul>
-<li style="margin-bottom: 4px;">GTC***文件夹：包含串口屏的驱动程序和相关配置文件，供开发者修改和扩展。<ul>
-<li>APP文件夹：应用逻辑代码</li><li>BSP文件夹：硬件相关驱动代码</li><li>ui文件夹：UI界面交互代码</li></ul></li>
-<li style="margin-bottom: 4px;">Hardware文件夹：串口屏DEMO板原理图、PCB</li>
-<li style="margin-bottom: 4px;">hmi-project文件夹：包含串口示例的HMI-Designer工程文件，用于界面设计和配置。<ul>
-<li>board文件夹：资源文件及代码</li><li>out文件夹：资源文件及代码（适合非HMI模块用户）</li><li>screen文件夹：UI界面交互代码</li><li>sources文件夹：图片素材文件</li></ul></li>
-<li style="margin-bottom: 4px;">串口协议.xlsx：详细描述了串口屏的通信协议，便于理解和调试。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<br>
+
+<li>2: Serial Port Example文件夹结构</li>
+<table>
+ <tr>
+  <td>Serial Port Example/</td>
+  <td>4.3寸和7寸两款屏的串口示例的硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;|-GTC-480272TFT43XP 串口例程/</td>
+  <td>4.3寸屏串口示例的软硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;|-GTC-480800TFT70GP 串口例程/</td>
+  <td>7寸屏串口示例的软硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-Hardware/</td>
+  <td>串口屏DEMO板原理图、PCB</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-Keil5工程/</td>
+  <td>串口屏的Keil5工程</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-hmi-project/</td>
+  <td>串口示例的HMI-Designer工程文件</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-board/</td>
+  <td>资源文件及代码</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-out/</td>
+  <td>资源文件及代码（适合非HMI模块用户）</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-screen/</td>
+  <td>UI界面交互代码</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-sources/</td>
+  <td>图片素材文件</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-*.gtui尾缀文件</td>
+  <td>模块的示例工程文件，使用HMI-Designer打开</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-串口协议.xlsx</td>
+  <td>详细描述了串口屏的通信协议</td>
+ </tr>
+</table>
+
+
 
 #### 快速开始
 <ul>
