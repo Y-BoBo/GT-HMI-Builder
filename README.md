@@ -107,10 +107,10 @@
 <table>
  <tr>
   <td>Serial Port Example/</td>
-  <td>4.3寸和7寸两款屏的串口示例的硬件资料</td>
+  <td>4.3寸和7寸两款屏的串口示例的软硬件资料</td>
  </tr>
  <tr>
-  <td>&nbsp;&nbsp;|-GTC-480272TFT43XP 串口例程/</td>
+  <td>&nbsp;&nbsp;|-GT-GL240320TFT28-21GP 串口例程/</td>
   <td>4.3寸屏串口示例的软硬件资料</td>
  </tr>
  <tr>
@@ -155,6 +155,67 @@
  </tr>
 </table>
 
+<br>
+
+<li>3: GT-GUI LCD文件夹结构</li>
+<table>
+ <tr>
+  <td>GT-GUI LCD/</td>
+  <td>1.9、2.8、3.5、7寸GUI LCD的软硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;|-GT-GL170320T19-S0XC64/</td>
+  <td>1.9寸GUI LCD液晶模组的软硬件资料</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;|-GT-GL240320TFT28-21GP/</td>
+  <td>2.8寸GUI LCD液晶模组的软硬件资料</td>
+ </tr>
+  <tr>
+  <td>&nbsp;&nbsp;|-GT-GL320480T35-S0GC64/</td>
+  <td>3.5寸GUI LCD液晶模组的软硬件资料</td>
+ </tr>
+  <tr>
+  <td>&nbsp;&nbsp;|-GT-GL800480T70-S0GC128/</td>
+  <td>7寸GUI LCD液晶模组的软硬件资料</td>
+ </tr>
+  <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-board/</td>
+  <td>资源文件及代码</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-Hardware/</td>
+  <td>GUI LCD的DEMO板原理图、PCB</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-Keil5/</td>
+  <td>GUI LCD的Keil5工程</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-hmi-project/</td>
+  <td>GUI LCD示例的HMI-Designer工程文件</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-out/</td>
+  <td>资源文件及代码（适合非HMI模块用户）</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-screen/</td>
+  <td>UI界面交互代码</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-sources/</td>
+  <td>图片素材文件</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|-&nbsp;|-*.gtui尾缀文件</td>
+  <td>模块的示例工程文件，使用HMI-Designer打开</td>
+ </tr>
+ <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;|-&nbsp;|数据手册</td>
+  <td>内含GUI LCD的电气参数、尺寸、连接方式、驱动代码等</td>
+ </tr>
+</table>
 
 
 #### 快速开始
@@ -185,7 +246,7 @@
 #### GT-HMI Builder产品路线图
 <ul>
 <li style="margin-bottom: 4px;">第一弹（已上线）：开源串口屏/液晶屏模组系列，涵盖4寸，4.3寸，7寸，10寸</li>
-<li style="margin-bottom: 4px;">第二弹（2024年8月）：GUI-LCD，适用于小尺寸屏幕的GT-HMI Builder开源硬件系列，包含GUI-LCD以及开发板</li>
+<li style="margin-bottom: 4px;">第二弹（已上线）：GUI-LCD，适用于小尺寸屏幕的GT-HMI Builder开源硬件系列，包含GUI-LCD以及开发板</li>
 <li style="margin-bottom: 4px;">第三弹（2024年9月）：基于WIFI SOC的开源硬件，可接入高通旗下智匠AI的API，包含大语言模型，视觉识别，语音识别，语音合成等AI服务</li>
 <li style="margin-bottom: 4px;">第四弹：待定</li>
 </ul>
